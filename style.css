@@ -19,7 +19,18 @@
     /* margin-top: 0%;
     padding-top: 0%; */
 }
-.productImage {
+
+.cartButton {
+    height: 5%;
+    width: 10%;
+    background-color: yellow;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    right: -90%;
+}
+
+.productImageBox {
     border-right: 2px solid blue;
     border: 2px solid blue;
     display: flex;
@@ -27,20 +38,24 @@
     width: 50%;
 }
 
+#productImage {
+    height: 90%;
+    width: 90%; 
+}
+
 .productInfo {
     border-left: 4px solid green;
     border: 4px solid green;
     display: flex;
-    flex-direction: row;
-    width: 50%;
+    width: 100%;
     justify-content: center;
-    align-content:space-around;
+    align-items: center;
+    align-content:space-between;
 }
 
-.productPrice {
+.productDetails {
     border: 4px solid grey;
-    width: 90%;
-
+    width: 100%;
 }
 
 .productName {
@@ -49,13 +64,14 @@
 }
 
 .productOwner {
-    font-size: small;
-    margin: 0%;
+    font-size: x-small;
     padding: 0%;
 }
 
-.productCost {
-    font-size: x-large;
+h3 {
+    font-size: large;
+    margin: 0%;
+    padding: 0%;
 }
 
 .buttons {
@@ -64,10 +80,59 @@
     justify-content:space-around;
 }
 
-#button1 {
+#seeReviewButtons {
     border: 4px solid orange;
 }
 
-#button2 {
+#addToCartButton {
     border: 4px solid purple;
+}
+
+/* Modal (background) */
+.modal {
+    /*Hidden by default */
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* display: none; */
+    /* Fallback color */
+    background-color: rgb(46, 61, 73);
+    /* With opacity */
+    background-color: rgba(46, 61, 73, 0.6);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% auto;
+    width: 80%;
+    background-color: whitesmoke;
+    border: 3px solid orange;
+}
+
+/* The Close Button */
+#close {
+    align-self: flex-end;
+    color: black;
+    font-size: 40px;
+}
+
+#close:hover,
+#close:focus {
+    color: #5cf;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Image*/
+.modal-img {
+    display: inline-block;
+    margin: 16px 0 16px;
+    width: 320px;
 }

@@ -8,33 +8,59 @@
     <script src="./index.js" defer></script>
     <title>Document</title>
 </head>
-    <body>
-        <div id="container">
-            <div id="topBox">
-                <div class="productImage">
-                    <img src="./images/wireframe-mesh-cube-connected-dots-260nw-477369628.webp" alt="wireframe cube">
-                </div>
-                <div class="productInfo">
-                    <div class="productTitle">
-                        <div class="productPrice">
-                            <h1 class="productName">Awesome Sauce</h1>
-                            <h2 class="productOwner">By: Team Awesome Saucesome</h2>
-                            <h3 class="productCost">$49.29</h3>
-                        </div>
-                        <div class="buttons">
-                            <button id="button1">Go To Reviews/Comments</button>
-                            <button id="button2">Add To Cart</button>
-                        </div>
+<body>
+    <div id="container">
+        <button class="cartButton">Cart</button>
+        <div id="topBox">
+            <div class="productImageBox">
+                <img id="productImage" src="./images/Columbia_Mens_Bahama_Ii_Short_Sleeve_Shirt_Collegiate_Navy_pic1.jpg" alt="Columbia_Mens_Bahama_Ii_Short_Sleeve_Shirt_Collegiate_Navy">
+            </div>
+            <div class="productInfo">
+                <div class="productTitle">
+                    <div class="productDetails">
+                        <h1 class="productName">Columbia Men's Bahama Ii Short Sleeve Shirt</h1>
+                        <h2 class="productOwner">By: Columbia</h2>
+                        <h3 class="listPrice">List Price: $45.00</h3>
+                        <h3 class="productCost">Price: $40.00</h3>
+                        <h3 class="productSavings">You Save: $5.00 (11%)</h3>
+                    </div>
+                    <div class="buttons">
+                        <button id="addToCartButton">Add To Cart</button>
+                        <button id="seeReviewsButton" onclick="document.getElementById('productReviews').scrollIntoView();">Go To Reviews/Comments</button>
                     </div>
                 </div>
             </div>
-            <div id="bottomBox">
-                <Div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique excepturi temporibus ipsum ipsa est, ea consectetur obcaecati placeat consequatur iste itaque veritatis. Beatae cum libero enim quisquam. Exercitationem, neque harum.
-                    </p>
-                </Div>
+        </div>
+        <div id="bottomBox">
+            <div>
+                <h4>Product Description</h4>
+                <p id="productDescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore fuga natus architecto quibusdam possimus laboriosam, praesentium, similique nemo qui maxime, fugiat saepe ullam autem eaque atque voluptates vitae quod.
+                </p>
+                <h4>Product Reviews</h4>
+                <p id="productReviews">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique excepturi temporibus ipsum ipsa est, ea consectetur obcaecati placeat consequatur iste itaque veritatis. Beatae cum libero enim quisquam. Exercitationem, neque harum.
+                </p>
             </div>
         </div>
-    </body>
+    </div>
+    <!-- Modal -->
+    <section class="added-to-shopping-cart">
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span id="close">x</span>
+                <h2>Shopping Cart Contents</h2>
+                    <div class="modal-img">
+                        <img src="./images/Columbia_Mens_Bahama_Ii_Short_Sleeve_Shirt_Collegiate_Navy_thumbnail.jpg" alt="">
+                    </div>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
+
+
+
+<!-- 
+Example page to use
+https://www.amazon.com/Columbia-Bahama-Sleeve-X-Large-Collegiate/dp/B0089ONODY?ref_=Oct_s9_apbd_otopr_hd_bw_b2hbDCl&pf_rd_r=J02NJPJCQTKNA2GX694X&pf_rd_p=87bece57-c076-5184-8106-2db5fa20af44&pf_rd_s=merchandised-search-11&pf_rd_t=BROWSE&pf_rd_i=2476517011&th=1&psc=1 -->
