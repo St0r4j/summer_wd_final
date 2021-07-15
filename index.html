@@ -4,35 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:ital,wght@1,100&family=Uchen&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="./index.js" defer></script>
     <title>Document</title>
 </head>
 <body>
+    <!-- Overarching container for all data on the page -->
     <div id="container">
-        <button class="cartButton" onclick="openModal()">Cart</button>
+        <!-- Navigation Menu container with all buttons at the top centered -->
+        <div id="navMenu">
+            <div>
+                <input id="buttonAffect" type="button" value="Home">
+            </div>
+            <div>
+                <input id="buttonAffect" type="button" value="Women">
+            </div>
+            <div>
+                <input id="buttonAffect" type="button" value="Kids">
+            </div>
+            <div>
+                <input id="buttonAffect" type="button" value="Shoes">
+            </div>
+            <div>
+                <input id="buttonAffect" type="button" value="Accessories">
+            </div>
+            <div>
+                <input id="buttonAffect" type="button" value="Luggage">
+            </div>
+            <div>
+                <input id="buttonAffect" type="button" value="Sales & Deals">
+            </div>
+        </div>
+        <!-- Shopping Cart button under the navigation menu and top right -->
+        <div class="cartButton">
+            <input id="cartButton" class="cartButton" type="image" type="button" onclick="openModal()" src="./images/shoppingCart.png">
+        </div>
+        <!-- Top Box separation for aligning Flexbox correctly -->
         <div id="topBox">
+            <!-- Image of the product to the far left -->
             <div class="productImageBox">
                 <img id="productImage" src="./images/Columbia_Mens_Bahama_Ii_Short_Sleeve_Shirt_Collegiate_Navy_pic1.jpg" alt="Columbia_Mens_Bahama_Ii_Short_Sleeve_Shirt_Collegiate_Navy">
             </div>
+            <!-- Product information to include name and price to the right of the image filling down in rows -->
             <div class="productInfo">
                 <div class="productTitle">
                     <div class="productDetails">
                         <h1 class="productName">Columbia Men's Bahama Ii Short Sleeve Shirt</h1>
                         <h2 class="productOwner">By: Columbia</h2>
-                        <h3 class="listPrice">List Price: $45.00</h3>
-                        <h3 class="productCost">Price: $40.00</h3>
-                        <h3 class="productSavings">You Save: $5.00 (11%)</h3>
+                        <h3 class="listPrice">List Price: <s>$45.00</s> Details</h3>
+                        <h3 class="productCost">Price: 
+                            <span class="priceColor">$40.00</span>
+                        </h3>
+                        <h3 class="productSavings">You Save: 
+                            <span class="priceSavings">$5.00 (11%)</span>
+                        </h3>
                     </div>
+                    <!-- Buttons for adding to cart and seeing reviews under product information  -->
                     <div class="buttons">
-                        <button id="addToCartButton" onclick="addToCart()">Add To Cart</button>
-                        <button id="seeReviewsButton" onclick="document.getElementById('productReviews').scrollIntoView();">Go To Reviews/Comments</button>
+                        <button id="buttonAffect" onclick="addToCart()">Add To Cart</button>
+                        <button id="buttonAffect" onclick="document.getElementById('productReviews').scrollIntoView();">Go To Reviews/Comments</button>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Bottom Box separation for aligning Flexbox correctly -->
         <div id="bottomBox">
             <div>
+                <!-- Product description and details listed in bullet formatting -->
                 <h4>Product Description</h4>
                 <ul id="productDescription">
                     <li>100% Other Fibers</li>
@@ -46,6 +87,7 @@
                     <li>Quick dry fabric</li>
                     <li>Rod holder above chest</li>
                 </ul>
+                <!-- Product reviews listed at the bottom in paragraph format -->
                 <h4>Product Reviews</h4>
                 <p id="productReviews">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique excepturi temporibus ipsum ipsa est, ea consectetur obcaecati placeat consequatur iste itaque veritatis. Beatae cum libero enim quisquam. Exercitationem, neque harum.
@@ -53,12 +95,12 @@
             </div>
         </div>
     </div>
-    <!-- Modal -->
+    <!-- Modal utilized in order to pop the shopping cart up centered just down from the top-->
     <section class="added-to-shopping-cart">
         <div class="modal" id="modal">
             <div id="modal-content">
                 <span id="close" onclick="closeModal()">x</span>
-                <h2>Shopping Cart Contents</h2>
+                <h5>Shopping Cart Contents</h5>
             </div>
         </div>
     </section>
@@ -68,5 +110,6 @@
 
 
 <!-- 
-Example page to use
-https://www.amazon.com/Columbia-Bahama-Sleeve-X-Large-Collegiate/dp/B0089ONODY?ref_=Oct_s9_apbd_otopr_hd_bw_b2hbDCl&pf_rd_r=J02NJPJCQTKNA2GX694X&pf_rd_p=87bece57-c076-5184-8106-2db5fa20af44&pf_rd_s=merchandised-search-11&pf_rd_t=BROWSE&pf_rd_i=2476517011&th=1&psc=1 -->
+sample page used for ideas
+https://www.amazon.com/Columbia-Bahama-Sleeve-X-Large-Collegiate/dp/B0089ONODY?ref_=Oct_s9_apbd_otopr_hd_bw_b2hbDCl&pf_rd_r=J02NJPJCQTKNA2GX694X&pf_rd_p=87bece57-c076-5184-8106-2db5fa20af44&pf_rd_s=merchandised-search-11&pf_rd_t=BROWSE&pf_rd_i=2476517011&th=1&psc=1
+-->
