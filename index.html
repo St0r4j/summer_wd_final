@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="container">
-        <button class="cartButton">Cart</button>
+        <button class="cartButton" onclick="openModal()">Cart</button>
         <div id="topBox">
             <div class="productImageBox">
                 <img id="productImage" src="./images/Columbia_Mens_Bahama_Ii_Short_Sleeve_Shirt_Collegiate_Navy_pic1.jpg" alt="Columbia_Mens_Bahama_Ii_Short_Sleeve_Shirt_Collegiate_Navy">
@@ -25,7 +25,7 @@
                         <h3 class="productSavings">You Save: $5.00 (11%)</h3>
                     </div>
                     <div class="buttons">
-                        <button id="addToCartButton">Add To Cart</button>
+                        <button id="addToCartButton" onclick="addToCart()">Add To Cart</button>
                         <button id="seeReviewsButton" onclick="document.getElementById('productReviews').scrollIntoView();">Go To Reviews/Comments</button>
                     </div>
                 </div>
@@ -34,9 +34,18 @@
         <div id="bottomBox">
             <div>
                 <h4>Product Description</h4>
-                <p id="productDescription">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolore fuga natus architecto quibusdam possimus laboriosam, praesentium, similique nemo qui maxime, fugiat saepe ullam autem eaque atque voluptates vitae quod.
-                </p>
+                <ul id="productDescription">
+                    <li>100% Other Fibers</li>
+                    <li>Imported</li>
+                    <li>SUN PROTECTION: Columbia Men's PFG Bahama II Short Sleeve fishing shirt features our signature UPF 30 fabric that helps to blocks UVA and UVA rays to help prevent sunburns and skin damage during long hours in the sun.</li>
+                    <li>HANDY FEATURES: This short sleeve fishing shirt features two handy chest pockets with velcro closure for convenient storing.</li>
+                    <li>COMFORT & BREATHABILITY: Hidden vents at the shoulders and 100% nylon quick dry fabric make for a shirt that's breathable and comfortable during any outdoor activity.</li>
+                    <li>RELAXED FIT: A relaxed, lightweight fit make this fishing shirt the ultimate choice for casual days outside as well as for activity out on the water.</li>
+                    <li>OMNI-SHADE: Be safe and protected. Omni-Shade blocks UVA and UVB rays to help prevent sunburns and long-term skin damage. The tight weave construction with UV absorbent yarns block the full spectrum of harmful UV rays.</li>
+                    <li>Omni-Shade UPF 30 sun protection</li>
+                    <li>Quick dry fabric</li>
+                    <li>Rod holder above chest</li>
+                </ul>
                 <h4>Product Reviews</h4>
                 <p id="productReviews">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique excepturi temporibus ipsum ipsa est, ea consectetur obcaecati placeat consequatur iste itaque veritatis. Beatae cum libero enim quisquam. Exercitationem, neque harum.
@@ -47,12 +56,9 @@
     <!-- Modal -->
     <section class="added-to-shopping-cart">
         <div class="modal" id="modal">
-            <div class="modal-content">
-                <span id="close">x</span>
+            <div id="modal-content">
+                <span id="close" onclick="closeModal()">x</span>
                 <h2>Shopping Cart Contents</h2>
-                    <div class="modal-img">
-                        <img src="./images/Columbia_Mens_Bahama_Ii_Short_Sleeve_Shirt_Collegiate_Navy_thumbnail.jpg" alt="">
-                    </div>
             </div>
         </div>
     </section>
